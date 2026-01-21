@@ -1,0 +1,266 @@
+/* Dark animated background */
+body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background blobs */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: 0;
+  animation: blob 7s infinite;
+}
+
+body::before {
+  background: rgba(147, 51, 234, 0.5);
+  top: -250px;
+  left: -250px;
+  animation-delay: 0s;
+}
+
+body::after {
+  background: rgba(139, 92, 246, 0.5);
+  top: -250px;
+  right: -250px;
+  animation-delay: 2s;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Container adjustments */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass morphism card */
+main > div {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Avatar styling */
+.MuiAvatar-root {
+  animation: bounceSlow 3s ease-in-out infinite !important;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4) !important;
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Toggle buttons container */
+main > div > div > div:first-of-type {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* Toggle buttons */
+.MuiButton-root {
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.MuiButton-root:not(.MuiButton-contained) {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+.MuiButton-root:not(.MuiButton-contained):hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+.MuiButton-contained {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%) !important;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4) !important;
+  transform: scale(1.05);
+}
+
+.MuiButton-contained:hover {
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.6) !important;
+  transform: scale(1.08);
+}
+
+/* Form fields */
+.MuiTextField-root {
+  animation: slideDown 0.4s ease-out;
+}
+
+.MuiTextField-root:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.MuiTextField-root:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.MuiTextField-root:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input fields glass effect */
+.MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiOutlinedInput-root:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  background: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.5);
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.MuiOutlinedInput-input {
+  color: white !important;
+}
+
+.MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #9333ea !important;
+}
+
+/* Error text */
+p[style*="color:red"], 
+p[style*="color: red"] {
+  color: #f87171 !important;
+  animation: shake 0.5s ease-in-out;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Submit button */
+.MuiButton-root[type="submit"] {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4) !important;
+  transition: all 0.3s ease !important;
+
+}
+
+.MuiButton-root[type="submit"]:hover {
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.6) !important;
+  transform: scale(1.1);
+}
+
+.MuiButton-root[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Snackbar glass effect */
+.MuiSnackbar-root {
+  animation: slideUp 0.4s ease-out;
+}
+
+.MuiSnackbar-root .MuiPaper-root {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grid spacing adjustments */
+.MuiGrid-container {
+  margin-top: 0 !important;
+}
+
+.MuiGrid-item {
+  animation: slideDown 0.4s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body::before,
+  body::after {
+    width: 300px;
+    height: 300px;
+  }
+  
+  main > div {
+    margin-top: 32px !important;
+    padding: 24px 16px !important;
+  }
+}

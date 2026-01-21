@@ -1,0 +1,195 @@
+/* .homeBackground{
+    height:100vh;
+    background-image: url("../../background.png");
+    background-size: cover;
+}
+
+.navBar{
+display:flex;
+ justify-content: space-around;
+
+}
+.navButtons{
+    width:10vw;
+    height:10vh;
+}
+
+
+.meetComponent{
+    display: flex;
+    height:90vh;
+    width:100vw;
+}
+
+.leftPan{
+    width:50vw;
+    padding-left:10vw;
+}
+
+.rightPan{
+    background-image: url('../../homeImg.jpg');
+    width:50vw;
+    height:100%;
+    
+
+    background-repeat: no-repeat;
+}
+
+.meetCode  div input{
+ color:rgb(186, 6, 231);
+ height:"3vh";
+} */
+
+
+
+
+
+.homeBackground{
+    min-height: 100vh;
+    background-image: url("../../background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.navTitle h2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: rgb(158, 10, 195);
+    margin: 0;
+}
+
+.navButtons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.meetComponent{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+}
+
+.leftPan{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.leftPan p {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    font-weight: bold;
+    color: rgb(175, 5, 218);
+    text-align: center;
+    margin: 0;
+}
+
+.rightPan{
+    background-image: url('../../homeImg.jpg');
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.meetCode {
+    width: 100%;
+    max-width: 400px;
+}
+
+.meetCode div input{
+    color: rgb(186, 6, 231);
+    font-size: 1rem;
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+    .navBar {
+        padding: 1.5rem 3rem;
+        flex-wrap: nowrap;
+    }
+    
+    .leftPan {
+        width: 50%;
+        padding-left: 5vw;
+        padding-right: 2rem;
+        align-items: flex-start;
+    }
+    
+    .leftPan p {
+        text-align: left;
+    }
+    
+    .rightPan {
+        width: 50%;
+        min-height: 100%;
+    }
+    
+    .meetCode {
+        max-width: 500px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .navBar {
+        padding: 2rem 4rem;
+    }
+    
+    .leftPan {
+        padding-left: 10vw;
+    }
+    
+    .meetCode {
+        width: 20vw;
+        min-width: 300px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .navTitle h2 {
+        font-size: 3rem;
+    }
+    
+    .leftPan p {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .navBar {
+        padding: 1rem;
+        justify-content: center;
+    }
+    
+    .navButtons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .leftPan {
+        padding: 1.5rem 1rem;
+    }
+    
+    .rightPan {
+        display: none;
+    }
+}

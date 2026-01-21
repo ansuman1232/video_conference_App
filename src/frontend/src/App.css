@@ -1,0 +1,415 @@
+/* .LandingPageContainer{
+
+  width:100vw;height:100vh;
+  background-image: url("/background.png");
+  background-size: cover;
+}
+
+.LandingPageNavbar{
+  display:flex;
+  justify-content:space-between;
+  padding-left:3rem;
+}
+
+.LandingTitle{
+
+  color:rgb(178, 121, 231);
+  font-size: 3rem;
+}
+
+.NavList{
+  padding-right:2rem;
+  color:rgb(201, 201, 201);
+  font-size: 1.8rem;
+  display:flex;
+  justify-content: space-between;
+  font-weight: 700;
+   cursor:pointer;
+}
+
+.NavList p{
+  padding-left:1rem;
+  padding-right:1rem;
+ 
+}
+
+.LandingPageMainContainer{
+  height:80vh;
+  width:100vw;
+  display:flex;
+
+  
+}
+
+.LandingInfo{
+  padding-top:5rem;
+ width:50%;
+  height:80vh;
+display:flex;
+  align-items: center;
+  padding-left:2rem;
+}
+
+.LandingInfo p{
+  color:rgb(231, 172, 62);
+   color:white;
+font-size: 5rem;
+font-weight: 600;
+}
+
+
+.LandingInfo div button a{
+
+   color:white;
+   text-decoration: none;
+   padding:1rem;
+font-size: 2rem;
+font-weight: 600;
+}
+
+.LandingInfo div button {
+  margin-top: 1rem;
+  padding:1rem;
+ background-color: orange;
+border-radius: 20px;
+opacity:0.5;
+}
+
+.LandingInfo div button:hover {
+  margin-top: 1rem;
+  padding:1rem;
+ background-color: orange;
+border-radius: 20px;
+opacity:1;
+}
+
+
+.LandingInfo span{
+  color:rgb(231, 172, 62);
+}
+
+.mobileImg{
+
+  width:40%;
+  height:80vh;
+  background-repeat: no-repeat;
+  
+}
+.mobileImg img{
+   width:100%;
+   height:100%;
+}
+
+
+
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.LandingInfo div p {
+
+  animation: slideUp 2s ease-out  infinite alternate;
+}
+
+
+.mobileImg {
+  opacity: 0; 
+  animation: slideUp 2s ease-out 1 forwards;
+  animation-delay: 0.3s;
+} */
+
+
+
+
+.LandingPageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.LandingPageNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.LandingTitle {
+  color: rgb(178, 121, 231);
+  font-size: 3rem;
+}
+
+.NavList {
+  padding-right: 2rem;
+  color: rgb(201, 201, 201);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  cursor: pointer;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.NavList p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.NavList p:hover {
+  color: white;
+}
+
+.LandingPageMainContainer {
+  min-height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.LandingInfo {
+  padding-top: 5rem;
+  width: 50%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.LandingInfo p {
+  color: white;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.LandingInfo div button a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.LandingInfo div button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: orange;
+  border-radius: 20px;
+  opacity: 0.5;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.LandingInfo div button:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.LandingInfo span {
+  color: rgb(231, 172, 62);
+}
+
+.mobileImg {
+  width: 40%;
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileImg img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.LandingInfo div p {
+  animation: slideUp 2s ease-out infinite alternate;
+}
+
+.mobileImg {
+  opacity: 0;
+  animation: slideUp 2s ease-out 1 forwards;
+  animation-delay: 0.3s;
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .LandingTitle {
+    font-size: 2.5rem;
+  }
+
+  .NavList {
+    font-size: 1.5rem;
+  }
+
+  .LandingInfo p {
+    font-size: 3.5rem;
+  }
+
+  .LandingInfo div button a {
+    font-size: 1.5rem;
+  }
+
+  .LandingPageNavbar {
+    padding: 1.5rem 2rem;
+  }
+
+  .LandingInfo {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .LandingPageNavbar {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .LandingTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .NavList {
+    padding-right: 0;
+    font-size: 1.2rem;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .NavList p {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .LandingPageMainContainer {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .LandingInfo {
+    width: 100%;
+    min-height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .LandingInfo p {
+    font-size: 2.5rem;
+  }
+
+  .LandingInfo div button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .LandingInfo div button a {
+    font-size: 1.3rem;
+  }
+
+  .mobileImg {
+    width: 100%;
+    min-height: 300px;
+    padding: 1rem;
+  }
+
+  .mobileImg img {
+    max-width: 80%;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .LandingTitle {
+    font-size: 1.5rem;
+  }
+
+  .NavList {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .NavList p {
+    padding: 0.5rem 0;
+  }
+
+  .LandingInfo {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .LandingInfo p {
+    font-size: 1.8rem;
+  }
+
+  .LandingInfo div button {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .LandingInfo div button a {
+    font-size: 1.1rem;
+  }
+
+  .mobileImg {
+    min-height: 250px;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+  .LandingTitle {
+    font-size: 1.3rem;
+  }
+
+  .NavList {
+    font-size: 0.9rem;
+  }
+
+  .LandingInfo p {
+    font-size: 1.5rem;
+  }
+
+  .LandingInfo div button a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
