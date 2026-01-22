@@ -254,7 +254,7 @@ bottom:0vh;
 .inputLobby {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
   position: absolute;
   top: 20%;
   left: 50%;
