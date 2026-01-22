@@ -192,6 +192,7 @@ bottom:0vh;
   background: linear-gradient(180deg, rgb(51, 51, 49) 80%, rgb(93, 92, 93));
   color: rgb(146, 66, 222);
   overflow: hidden;
+  z-index: 999;
 }
 
 .sendMessage {
@@ -253,6 +254,7 @@ bottom:0vh;
 .inputLobby {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2vh;
   position: absolute;
   top: 20%;
   left: 50%;
