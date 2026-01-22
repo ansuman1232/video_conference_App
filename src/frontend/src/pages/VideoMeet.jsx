@@ -2,7 +2,7 @@ import React,{useRef,useState,useEffect} from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import io from "socket.io-client";
-import style from "../styles/videoMeet.module.css"
+import style from "../styles/VideoMeet.module.css"
 import IconButton from '@mui/material/IconButton';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import VideocamOffIcon from '@mui/icons-material/VideocamOff'
@@ -14,9 +14,9 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import Badge from '@mui/material/Badge';
 import ChatIcon from '@mui/icons-material/Chat';
 import { useNavigate } from 'react-router-dom';
+import server from "../environment.js"
 
-
-const server_url="http://localhost:3000";
+const server_url=server;
 let connections={};
 //================connection to stun server================
 const peerConfigConnection={

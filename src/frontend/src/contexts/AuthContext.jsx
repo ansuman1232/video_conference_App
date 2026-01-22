@@ -1,11 +1,12 @@
 import axios from "axios";
 import {createContext,useContext,useState,useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { ServerRouter, useNavigate } from "react-router-dom";
 export const AuthContext=createContext({});
 import { status } from "http-status";
+import server from "../environment";
 //===========to store our base  url==========
 const client=axios.create({
-    baseURL:"http://localhost:3000/api/v1/user"
+    baseURL:`${server}/api/v1/user`
 })
 
 //==============AuthProvider	
