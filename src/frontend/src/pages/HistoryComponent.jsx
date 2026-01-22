@@ -43,13 +43,13 @@ export default function HistoryComponent() {
 
   
     let formatDate=(dateString)=>{
-       const date=new Date(dateString);//-> converted to Fri Jan 16 2026 22:44:27 GMT+0530 (India Standard Time)
-       const day=date.getDay().toString().padStart(2,"0");//-> extracted day and added pading if only 1 digit to make it 2 digit
-       const month=(date.getMonth()+1).toString().padStart(2,"0");//-> extracted month+1 and added pading if only 1 digit to make it 2 digit
-       const year=date.getFullYear();//-> extracting year
+       const date=new Date(dateString);
+       const day=date.getDay().toString().padStart(2,"0");
+       const month=(date.getMonth()+1).toString().padStart(2,"0");
+       const year=date.getFullYear();
 
  
-         return `${day}/${month}/${year}`//full year
+         return `${day}/${month}/${year}`
     }
 
 

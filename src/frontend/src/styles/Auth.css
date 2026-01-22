@@ -1,4 +1,4 @@
-/* Dark animated background */
+
 body {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   min-height: 100vh;
@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Animated background blobs */
+
 body::before,
 body::after {
   content: '';
@@ -40,13 +40,13 @@ body::after {
   66% { transform: translate(-20px, 20px) scale(0.9); }
 }
 
-/* Container adjustments */
+
 main {
   position: relative;
   z-index: 1;
 }
 
-/* Glass morphism card */
+
 main > div {
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(20px);
@@ -68,7 +68,7 @@ main > div {
   }
 }
 
-/* Avatar styling */
+
 .MuiAvatar-root {
   animation: bounceSlow 3s ease-in-out infinite !important;
   box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4) !important;
@@ -79,14 +79,13 @@ main > div {
   50% { transform: translateY(-10px); }
 }
 
-/* Toggle buttons container */
 main > div > div > div:first-of-type {
   display: flex;
   gap: 8px;
   margin-bottom: 24px;
 }
 
-/* Toggle buttons */
+
 .MuiButton-root {
   border-radius: 12px !important;
   transition: all 0.3s ease !important;
@@ -116,7 +115,7 @@ main > div > div > div:first-of-type {
   transform: scale(1.08);
 }
 
-/* Form fields */
+
 .MuiTextField-root {
   animation: slideDown 0.4s ease-out;
 }
@@ -144,7 +143,7 @@ main > div > div > div:first-of-type {
   }
 }
 
-/* Input fields glass effect */
+
 .MuiOutlinedInput-root {
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(10px);
@@ -181,7 +180,7 @@ main > div > div > div:first-of-type {
   color: #9333ea !important;
 }
 
-/* Error text */
+
 p[style*="color:red"], 
 p[style*="color: red"] {
   color: #f87171 !important;
@@ -196,7 +195,7 @@ p[style*="color: red"] {
   20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
-/* Submit button */
+
 .MuiButton-root[type="submit"] {
   background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%) !important;
   border-radius: 12px !important;
@@ -216,7 +215,7 @@ p[style*="color: red"] {
   transform: scale(0.98);
 }
 
-/* Snackbar glass effect */
+
 .MuiSnackbar-root {
   animation: slideUp 0.4s ease-out;
 }
@@ -242,7 +241,7 @@ p[style*="color: red"] {
   }
 }
 
-/* Grid spacing adjustments */
+
 .MuiGrid-container {
   margin-top: 0 !important;
 }
@@ -251,7 +250,7 @@ p[style*="color: red"] {
   animation: slideDown 0.4s ease-out;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   body::before,
   body::after {

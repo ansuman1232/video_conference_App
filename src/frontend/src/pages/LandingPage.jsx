@@ -16,7 +16,7 @@ export default function LandingPage() {
             <p onClick={()=>{route("/meet/gu121")}} style={{zIndex:"999"}} >Join As Guest</p>
              <p onClick={()=>{route("/auth")}}  style={{zIndex:"999"}} >Register</p>
              <p onClick={()=>{route("/auth")}} style={{zIndex:"999"}}  >Login</p>
-              {/* here we can use <button> also */}
+         
            </div>
         </nav>
         

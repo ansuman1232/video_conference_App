@@ -21,13 +21,10 @@ const Authentication = () => {
   const [username, setUsername] = useState();
   const [name, setName] = useState();
   const [password, setPassword] = useState();
-  //=====some extra info======================
+
   const [error, setError] = useState("");
   const [message, setMessage] = useState();
-  /*==========to show snackBar========
-Snackbars are often used as a tooltips/popups to show a message at the bottom of the screen.
- Click on the button to show the snackbar. It will disappear after 3 seconds
-  */
+
   const [open, setOpen] = useState();
 
   const {handleRegister,handleLogin} =React.useContext(AuthContext); 
@@ -47,7 +44,7 @@ Snackbars are often used as a tooltips/popups to show a message at the bottom of
           let result=await handleRegister(name,username,password);
          
           setMessage(result);
-          setOpen(true);//opening snackbar
+          setOpen(true);
           setFormState(0);
           setName("");
           setPassword("");
@@ -70,8 +67,7 @@ Snackbars are often used as a tooltips/popups to show a message at the bottom of
 
   const handleSubmit = (event) => {
     event.preventDefault();
-   
-    // Add registration logic here
+
   };
 
   return (
@@ -145,9 +141,7 @@ Snackbars are often used as a tooltips/popups to show a message at the bottom of
 
         </Box>
       </Box>
-     {/* open prop when snackbar will open
-     autoHideDuration is after how much time snackBar will hide in milli secondary
-     message is for message we want to display */}
+
       <Snackbar
       open={open} 
        autoHideDuration={4000}

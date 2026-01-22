@@ -4,28 +4,28 @@ import { ServerRouter, useNavigate } from "react-router-dom";
 export const AuthContext=createContext({});
 import { status } from "http-status";
 import server from "../environment";
-//===========to store our base  url==========
+
+
 const client=axios.create({
     baseURL:`${server}/api/v1/user`
 })
 
-//==============AuthProvider	
-// The wrapper component that manages the state (useState) and passes it down.
+
 
 export const AuthProvider=({children})=>{
     const authContext=useContext(AuthContext);
 
 
     const [userData,setUserData]=useState(authContext);
-//==sending user to home after login==========
+
     const route=useNavigate();
 
 
-//==================handle Registration================
+
     const handleRegister= async(name, username, password)=>{
         try{
              
-            //sending data to baseURL+ "/register"
+     
             let request= await client.post("/register",{
                 name:name,username:username,password:password
             });
@@ -38,7 +38,8 @@ export const AuthProvider=({children})=>{
           throw err;
         }
     }
-//====== handle sign in==========================
+
+
 const handleLogin= async(username,password)=>{
     try{
       
@@ -59,16 +60,13 @@ const handleLogin= async(username,password)=>{
 
 
     
-   // ❌ OLD WAY (Your snippet)
-// const data = { userData, setUserData, handleRegister };
 
-// ✅ OPTIMIZED WAY
 const data = useMemo(() => ({
     userData,
     setUserData,
     handleRegister,
     handleLogin
-  }), [userData]); // Only re-create 'data' if 'userData' changes
+  }), [userData]); 
   
 
     return (

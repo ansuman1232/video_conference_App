@@ -115,7 +115,6 @@
   object-fit: contain;
 }
 
-/* Animations */
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -137,7 +136,6 @@
   animation-delay: 0.3s;
 }
 
-/* Tablet Styles (768px - 1024px) */
 @media screen and (max-width: 1024px) {
   .LandingTitle {
     font-size: 2.5rem;
@@ -165,7 +163,7 @@
   }
 }
 
-/* Mobile Styles (max-width: 768px) */
+
 @media screen and (max-width: 768px) {
   .LandingPageNavbar {
     flex-direction: column;
@@ -226,7 +224,7 @@
   }
 }
 
-/* Small Mobile Styles (max-width: 480px) */
+
 @media screen and (max-width: 480px) {
   .LandingTitle {
     font-size: 1.5rem;
@@ -263,7 +261,7 @@
   }
 }
 
-/* Extra Small Mobile (max-width: 360px) */
+
 @media screen and (max-width: 360px) {
   .LandingTitle {
     font-size: 1.3rem;
