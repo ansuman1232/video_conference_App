@@ -221,7 +221,7 @@ bottom:0vh;
 
 .lobbyContainer {
   height: 100vh;
-  background-image: url(../../background.png);
+  background-image: url(../../public/background.png);
   background-size: cover;
   background-position: center;
   display: flex;
