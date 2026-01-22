@@ -7,6 +7,18 @@ import { createServer } from "node:http";
 import { connectToSocket } from "./controllers/socketManager.js";
 import router from "./route/usersRoutes.js";
 
+import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// This ensures the path is always absolute to app.js
+dotenv.config({ path: path.join(__dirname, ".env") });
+
+
+
 const app = express();
 
 
@@ -33,7 +45,7 @@ By default, Express uses a limit of 100KB when no limit is specified.
 
 app.use("/api/v1/user",router);
 //==========for stroing MongUrl=============================
-app.set("MongoURL", (process.env.MONGO_URL|| "mongodb+srv://signin123456www_db_user:cluster_0@cluster0_zoom.lm5qgop.mongodb.net/") )
+app.set("MongoURL", (process.env.MONGO_URL ) )
 async function main() {
 
     await mongoose.connect(app.get("MongoURL"));
