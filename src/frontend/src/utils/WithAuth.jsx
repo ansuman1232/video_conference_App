@@ -2,9 +2,9 @@ import {useEffect} from "react";
 import {UNSAFE_getTurboStreamSingleFetchDataStrategy, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { status } from "http-status";
-
+import server from "../environment";
 const client=axios.create({
-    baseURL:"http://localhost:3000/api/v1/user"
+    baseURL:`${server}/api/v1/user`
 });
 
 
