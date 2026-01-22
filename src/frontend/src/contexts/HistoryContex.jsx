@@ -3,11 +3,12 @@ import {createContext,useContext,useState,useMemo, Children} from "react";
 export const HisContex=createContext({})
 import { status } from "http-status";
 
-
+import server from "../environment";
 //===========to store our base  url==========
 const client=axios.create({
-    baseURL:"http://localhost:3000/api/v1/user"
+    baseURL:`${server}/api/v1/user`
 })
+
 
 
 export const HisProvider=({children})=>{
