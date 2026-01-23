@@ -48,14 +48,7 @@
 </ul>
 
 <h3>History page</h3>
-
-
-<h3>Video call chat feature</h3>
-<img width="1361" height="627" alt="chat" src="https://github.com/user-attachments/assets/27280c79-5fb7-4c28-a668-467911ee5479" />
-
-<h3>Screen share feature</h3>
-<img width="1361" height="627" alt="chat" src="https://github.com/user-attachments/assets/25a50e59-6635-4b0c-a1ec-20ed3b672f49" />
-
+<img width="1859" height="949" alt="history" src="https://github.com/user-attachments/assets/88fb089e-4a89-453f-bd8c-7bd11d4fae80" />
 
 <h3>Video call</h3>
 <img width="1870" height="940" alt="home" src="https://github.com/user-attachments/assets/3c3b1c1d-3997-48ec-8032-239148041f23" />
@@ -70,20 +63,8 @@
 <img width="1361" height="627" alt="chat" src="https://github.com/user-attachments/assets/27280c79-5fb7-4c28-a668-467911ee5479" />
 
 <h3>Screen share feature</h3>
-<img width="1361" height="627" alt="chat" src="https://github.com/user-attachments/assets/25a50e59-6635-4b0c-a1ec-20ed3b672f49" />
+<img width="1295" height="566" alt="screenShare" src="https://github.com/user-attachments/assets/1247671a-2a1c-484f-89e5-6b40387be114" />
 
 
-<h3>Video call</h3>
-<img width="1870" height="940" alt="home" src="https://github.com/user-attachments/assets/3c3b1c1d-3997-48ec-8032-239148041f23" />
 
-<ul>
-  <li>  user can turn off/on his mic or video camera</li>
-   <li> user can chat with other people who joined the video call</li>
-     <li> user can also share there screen to other user in video call</li>
-</ul>
 
-<h3>Video call chat feature</h3>
-<img width="1361" height="627" alt="chat" src="https://github.com/user-attachments/assets/27280c79-5fb7-4c28-a668-467911ee5479" />
-
-<h3>Screen share feature</h3>
-<img width="1361" height="627" alt="chat" src="https://github.com/user-attachments/assets/25a50e59-6635-4b0c-a1ec-20ed3b672f49" />
