@@ -27,7 +27,8 @@
 <img width="1859" height="949" alt="history" src="https://github.com/user-attachments/assets/88fb089e-4a89-453f-bd8c-7bd11d4fae80" />
 
 <h3>Video call</h3>
-<img width="1870" height="940" alt="home" src="https://github.com/user-attachments/assets/3c3b1c1d-3997-48ec-8032-239148041f23" />
+<img width="1338" height="634" alt="videoCall" src="https://github.com/user-attachments/assets/b1e408d8-8799-4d34-bd47-9f79b63569c9" />
+
 
 <ul>
   <li>  user can turn off/on his mic or video camera</li>
