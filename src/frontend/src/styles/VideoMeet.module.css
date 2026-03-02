@@ -122,8 +122,8 @@
   gap: 1rem;
   margin-bottom: 9vh;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 12vh;
+  left: 50vw;
   transform: translateX(-50%);
   width: auto;
   flex-wrap: wrap;
